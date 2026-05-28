@@ -20,7 +20,6 @@
 }
 
 html, body {
-  height: 100%;
   font-family: var(--font-sans);
   color: var(--white);
   background: var(--charcoal);
