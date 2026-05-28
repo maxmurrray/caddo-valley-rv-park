@@ -139,16 +139,9 @@ html, body {
   width: 100%;
   height: 100vh;
   min-height: 500px;
-  overflow: hidden;
-}
-
-.landing-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  background-image: url("images/landing.JPG");
+  background-size: cover;
+  background-position: center;
 }
 
 .landing-overlay {
@@ -507,6 +500,12 @@ html, body {
 
   .call-now-btn {
     margin-top: 80px;
+  }
+
+  /* Swap hero to portrait office photo on mobile */
+  .landing-wrapper {
+    background-image: url("images/office.png");
+    background-position: center top;
   }
 
   /* Reservations: allow scroll on mobile so content doesn't get cut */
