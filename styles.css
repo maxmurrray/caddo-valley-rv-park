@@ -1,0 +1,516 @@
+/* =============================================
+   Caddo Valley RV Park — Shared Styles
+   ============================================= */
+
+@import url("https://use.typekit.net/ggd6mmf.css");
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #821B1B;
+  --nav-bg: rgba(0, 0, 0, 0.68);
+  --white: #ffffff;
+  --charcoal: #1c1c1c;
+  --font-sans: "kohinoor-devanagari", "Kohinoor", Arial, sans-serif;
+  --font-serif: "ltc-kennerley", "Latienne Pro", Georgia, serif;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  color: var(--white);
+  background: var(--charcoal);
+}
+
+/* ---- NAVBAR ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 36px 10px;
+  gap: 24px;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-brand .site-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.navbar-brand .site-address {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--white);
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar-links a {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+  opacity: 0.75;
+}
+
+.navbar-links a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- HAMBURGER (mobile) ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ---- BUTTONS ---- */
+.btn-dark {
+  display: inline-block;
+  background: #000;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 14px 36px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-dark:hover {
+  background: #222;
+}
+
+/* ============================================================
+   LANDING PAGE
+   ============================================================ */
+.landing-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.landing-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-now-btn {
+  margin-top: 60px; /* nudge below exact center so it reads mid-image */
+}
+
+/* ============================================================
+   RESERVATIONS PAGE
+   ============================================================ */
+.reservations-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.reservations-left {
+  flex: 0 0 38%;
+  background: var(--charcoal);
+  padding: 96px 52px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reservations-left h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.reservations-left .contact-line {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.reservations-left .contact-question {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.reservations-left .contact-body {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.reservations-right {
+  flex: 1;
+  background: #333;
+  overflow: hidden;
+}
+
+.reservations-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ============================================================
+   RED INTERIOR PAGES (Rates & Amenities)
+   ============================================================ */
+.red-page {
+  min-height: 100vh;
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 60px;
+  text-align: center;
+}
+
+.red-page h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* ---- RATES ---- */
+.rates-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.rates-phone {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 64px;
+}
+
+.rates-columns {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 860px;
+  width: 100%;
+}
+
+.rates-col {
+  flex: 1;
+  min-width: 220px;
+  max-width: 340px;
+}
+
+.rates-col h2 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.rates-col p {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  opacity: 0.92;
+}
+
+/* ---- AMENITIES ---- */
+.amenities-list {
+  list-style: none;
+  margin-bottom: 52px;
+}
+
+.amenities-list li {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* ============================================================
+   PHOTOS PAGE
+   ============================================================ */
+.photos-page {
+  min-height: 100vh;
+  background: #111;
+  padding-top: 72px;
+}
+
+.photos-header {
+  text-align: center;
+  padding: 52px 24px 40px;
+}
+
+.photos-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.photos-header p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 10px;
+  opacity: 0.75;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 6px;
+  padding: 0 6px 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  opacity: 0.85;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0.6;
+  padding: 0 16px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover { opacity: 1; }
+
+.lightbox-prev { left: 12px; }
+.lightbox-next { right: 12px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar-brand .site-title {
+    font-size: 1.05rem;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Reservations */
+  .reservations-layout {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .reservations-left {
+    flex: none;
+    width: 100%;
+    padding: 80px 28px 48px;
+  }
+
+  .reservations-right {
+    height: 300px;
+  }
+
+  /* Rates */
+  .rates-columns {
+    gap: 48px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 4px;
+  }
+
+  .gallery-grid img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand .site-title {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand .site-address {
+    font-size: 0.65rem;
+  }
+
+  .red-page h1 {
+    font-size: 2rem;
+  }
+
+  .call-now-btn {
+    margin-top: 80px;
+  }
+
+  /* Reservations: allow scroll on mobile so content doesn't get cut */
+  .reservations-layout {
+    overflow: visible;
+  }
+}
